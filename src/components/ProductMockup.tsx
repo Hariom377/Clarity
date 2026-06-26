@@ -8,24 +8,24 @@ export default function ProductMockup() {
   const { t } = useI18n();
   const sym = brand.currency.symbol;
   
-  // Controlled sequential phases for deliberate timing
+  // Sequence states to match your natural application flow
   const [phase, setPhase] = useState<"idle" | "cursor-entering" | "clicking" | "revealed">("idle");
 
   useEffect(() => {
-    // Phase 1: Wait for parent reveal fade-in to settle completely
+    // Stage 1: Wait briefly for layout paint, then cursor tracks down
     const startTimer = setTimeout(() => {
       setPhase("cursor-entering");
-    }, 800);
+    }, 600);
 
-    // Phase 2: Wait for cursor to finish its crawl path, then press click down
+    // Stage 2: Cursor hits the precise center target of "I ALREADY HAVE AN ACCOUNT"
     const clickTimer = setTimeout(() => {
       setPhase("clicking");
-    }, 2400); // 800ms initial delay + 1600ms transition time
+    }, 2200);
 
-    // Phase 3: Hold the clicked state briefly, then paint dashboard screen
+    // Stage 3: Complete click micro-interaction and unlock the real-time brief dashboard
     const revealTimer = setTimeout(() => {
       setPhase("revealed");
-    }, 2650); 
+    }, 2450); 
 
     return () => {
       clearTimeout(startTimer);
@@ -34,18 +34,18 @@ export default function ProductMockup() {
     };
   }, []);
 
-  // Explicit type assignment ensures error-free Cloudflare compiling checks
+  // Structural coordinate map to explicitly strike the secondary login action canvas link
   const cursorVariants: Variants = {
-    idle: { x: 380, y: 260, opacity: 0 },
+    idle: { x: 340, y: 320, opacity: 0 },
     entering: {
       x: 180,
-      y: 115,
+      y: 262, // Re-indexed to hover precisely over the lower "I Already Have An Account" container boundary
       opacity: 1,
       transition: { duration: 1.6, ease: "easeInOut" }
     },
     clicking: {
       x: 180,
-      y: 115,
+      y: 262,
       opacity: 1,
       scale: 0.8,
       transition: { duration: 0.1 }
@@ -55,36 +55,63 @@ export default function ProductMockup() {
   return (
     <div className="relative w-full overflow-hidden select-none">
       
-      {/* ===== WORKSPACE LOCK SCREEN TERMINAL ===== */}
+      {/* ===== PHASE 1 & 2: PITCH BLACK MOBILE APP START LAYOUT ===== */}
       {phase !== "revealed" && (
-        <div className="flex h-[420px] w-full flex-col items-center justify-center rounded-xl border border-line2 bg-card shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)] p-6">
-          <div className="w-full max-w-[260px] space-y-4 text-center">
-            <div className="mx-auto h-8 w-8 rounded-md border border-line2 bg-line flex items-center justify-center font-mono text-xs text-paper">i</div>
-            <h4 className="font-sans text-sm font-medium tracking-tight text-paper">Access {brand.name} Workspace</h4>
+        <div className="flex h-[420px] w-full flex-col items-center justify-between rounded-xl border border-line2 bg-black shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)] px-6 py-12">
+          
+          {/* Brand/Product Identity Header Frame */}
+          <div className="flex flex-col items-center text-center mt-4">
+            {/* Minimal App Icon Container */}
+            <div className="h-12 w-12 rounded-xl bg-white border border-neutral-800 flex items-center justify-center shadow-md">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 7H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                <path d="M3 11h18"/>
+                <path d="M16 14v2"/>
+              </svg>
+            </div>
+            <span className="mt-5 font-mono text-[9px] uppercase tracking-[0.25em] text-muted">Welcome to</span>
+            <h4 className="mt-1 font-sans text-3xl font-semibold tracking-tight text-paper">{brand.name}</h4>
+            <p className="mt-2 font-sans text-[11px] text-muted">Your personal finance companion</p>
+          </div>
+
+          {/* Core Interactive Action Group Layout */}
+          <div className="w-full max-w-[280px] space-y-2.5 mb-2">
             
-            <motion.button
+            {/* Primary Action Button Link */}
+            <div className="w-full text-center rounded-full bg-white py-3 text-[11px] font-semibold text-black tracking-wide shadow-sm flex items-center justify-center gap-1">
+              GET STARTED
+              <span className="text-[10px]">→</span>
+            </div>
+            
+            {/* Secondary Action Loop Element (Target of Simulated Click) */}
+            <motion.div
               animate={
                 phase === "clicking" 
-                  ? { scale: 0.94, filter: "brightness(0.75)" } 
+                  ? { scale: 0.97, backgroundColor: "rgba(255,255,255,0.04)" } 
                   : { scale: 1 }
               }
-              className="w-full rounded-md bg-paper px-5 py-3 text-[14px] font-medium text-ink transition-colors"
+              className="w-full text-center rounded-full border border-neutral-800 bg-transparent py-3 text-[10px] font-bold text-paper tracking-wider"
             >
-              Log In securely
-            </motion.button>
+              I ALREADY HAVE AN ACCOUNT
+            </motion.div>
+          </div>
+
+          {/* Regional Localization Footer Baseline */}
+          <div className="font-mono text-[8px] tracking-wider text-faint flex gap-2">
+            <span>Secure</span>·<span>Private</span>·<span>Made for India</span>
           </div>
         </div>
       )}
 
-      {/* ===== THE ACTIVE DASHBOARD CARD ===== */}
+      {/* ===== PHASE 3: LIVE OPERATIONAL FINANCIAL TERMINAL (Dashboard Transition) ===== */}
       {phase === "revealed" && (
         <motion.div
           initial={{ opacity: 0, y: 15, filter: "blur(4px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
           className="w-full overflow-hidden rounded-xl border border-line2 bg-card shadow-[0_0_0_1px_rgba(255,255,255,0.02),0_40px_80px_-20px_rgba(0,0,0,0.8)]"
         >
-          {/* Header Metric Bar */}
+          {/* Header Window Framework */}
           <div className="flex items-center justify-between border-b border-line px-4 py-3">
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-line2" />
@@ -98,7 +125,7 @@ export default function ProductMockup() {
             </span>
           </div>
 
-          {/* Core Safe Spend Display */}
+          {/* Operational Metrics Block */}
           <div className="border-b border-line px-5 py-6">
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">{t.hero.mockup.safeSpend}</p>
             <div className="mt-2 font-mono text-[42px] font-medium leading-none tracking-[-0.02em] text-paper">
@@ -111,7 +138,7 @@ export default function ProductMockup() {
             </div>
           </div>
 
-          {/* Secondary Metric Items */}
+          {/* Tri-Column Layout Structure */}
           <div className="grid grid-cols-3 divide-x divide-line border-b border-line">
             {[
               { label: t.hero.mockup.balance, value: `${sym}84,200` },
@@ -125,7 +152,7 @@ export default function ProductMockup() {
             ))}
           </div>
 
-          {/* Goal Milestones Progression */}
+          {/* Allocation Milestone Metrics */}
           <div className="px-5 py-5">
             <div className="flex items-center justify-between">
               <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">{t.hero.mockup.goals}</p>
@@ -156,7 +183,7 @@ export default function ProductMockup() {
         </motion.div>
       )}
 
-      {/* ===== SIMULATED POINTER ASSET CONTAINER ===== */}
+      {/* ===== TRANSLATION HARDWARE POINTER CROSS-OVER ===== */}
       {phase !== "revealed" && (
         <motion.div
           variants={cursorVariants}
