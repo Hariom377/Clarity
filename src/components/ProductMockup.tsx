@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { AnimatedNumber } from './AnimatedNumber';
 import { brand } from '../lib/brand';
@@ -9,7 +9,6 @@ export default function ProductMockup() {
   const sym = brand.currency.symbol;
   
   const containerRef = useRef<HTMLDivElement>(null);
-  // Triggers exactly once when 20% of the module is scrolled into view
   const isVisible = useInView(containerRef, { once: true, amount: 0.2 });
   
   const [phase, setPhase] = useState<"idle" | "cursor-entering" | "clicking" | "revealed">("idle");
@@ -20,8 +19,8 @@ export default function ProductMockup() {
     }
   }, [isVisible, phase]);
 
-  // Mouse trajectory engineered to point straight to the operational login CTA center
-  const cursorVariants = {
+  // Explicit type assignment prevents the Cloudflare compiler from failing on string properties
+  const cursorVariants: Variants = {
     idle: { x: 320, y: 220, opacity: 0 },
     entering: {
       x: [320, 190],
@@ -41,7 +40,7 @@ export default function ProductMockup() {
   return (
     <div ref={containerRef} className="relative w-full overflow-hidden select-none">
       
-      {/* ===== PHASE 1 & 2: LOGIN WORKSPACE TERMINAL (Theme-Synchronized) ===== */}
+      {/* ===== PHASE 1 & 2: LOGIN WORKSPACE TERMINAL ===== */}
       {phase !== "revealed" && (
         <div className="flex h-[420px] w-full flex-col items-center justify-center rounded-xl border border-line2 bg-card shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)] p-6">
           <div className="w-full max-w-[260px] space-y-4 text-center">
@@ -70,7 +69,7 @@ export default function ProductMockup() {
         </div>
       )}
 
-      {/* ===== PHASE 3: AUTHENTICATED REAL-TIME DASHBOARD (Your Actual UI Structure) ===== */}
+      {/* ===== PHASE 3: AUTHENTICATED REAL-TIME DASHBOARD ===== */}
       {phase === "revealed" && (
         <motion.div
           initial={{ opacity: 0, y: 15, filter: "blur(4px)" }}
@@ -119,7 +118,7 @@ export default function ProductMockup() {
             ))}
           </div>
 
-          {/* Target Milestone Progression Rows (Spring Animated Bars) */}
+          {/* Target Milestone Progression Rows */}
           <div className="px-5 py-5">
             <div className="flex items-center justify-between">
               <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">{t.hero.mockup.goals}</p>
@@ -150,7 +149,7 @@ export default function ProductMockup() {
         </motion.div>
       )}
 
-      {/* ===== DETACHED MOUSE CURSOR ELEMENT ===== */}
+      {/* ===== VIRTUALIZED DESKTOP MOUSE CURSOR ===== */}
       {phase !== "revealed" && phase !== "idle" && (
         <motion.div
           variants={cursorVariants}
