@@ -40,7 +40,7 @@ const en = {
     title: 'Know Exactly How Much You Can Safely Spend Today.',
 
     subtitle:
-      'Clarity is built for freelancers, creators, self-employed professionals and gig workers in India whose income never arrives on a fixed date. One number. Every day. No guessing.',
+      'iRREGO is built for freelancers, creators, self-employed professionals and gig workers in India whose income never arrives on a fixed date. One number. Every day. No guessing.',
 
 
     ctaPrimary: 'Join Waitlist',
@@ -79,7 +79,7 @@ const en = {
     label: 'The Solution',
     title: 'One number that adjusts to your reality. Every single day.',
     body1:
-      'Clarity reads your income history, calculates your volatility, and tells you exactly how much is safe to spend today — protecting your rent, your goals, and your future in the process.',
+      'iRREGO reads your income history, calculates your volatility, and tells you exactly how much is safe to spend today — protecting your rent, your goals, and your future in the process.',
     body2:
       'No budget categories. No spreadsheets. Just one answer to the only question that matters. How much can I safely spend today?',
     points: [
@@ -95,7 +95,7 @@ const en = {
     title: 'Your money data stays yours. Period.',
     items: [
       { t: 'Your data, your control', d: 'We never sell, share, or monetize your financial information. Ever.' },
-      { t: 'Built on secure infrastructure', d: 'Clarity runs on Supabase — industry-standard secure cloud infrastructure used by thousands of apps globally.' },
+      { t: 'Built on secure infrastructure', d: 'iRREGO runs on Supabase — industry-standard secure cloud infrastructure used by thousands of apps globally.' },
       { t: 'No hidden tracking', d: 'We collect only what the app needs to work. Nothing else runs in the background.' },
       { t: 'You can delete everything', d: 'One tap clears your entire account and data permanently from our servers.' },
     ],
@@ -103,7 +103,7 @@ const en = {
 
   cta: {
     label: 'Early Access',
-    title: 'Clarity launches soon. Get in early.',
+    title: 'iRREGO launches soon. Get in early.',
     body: 'Join the waitlist and be the first to know when we go live. No spam. Just one email when we launch.',
     button: 'Join the Waitlist →',
   },
@@ -112,29 +112,29 @@ const en = {
     label: 'Features',
     title: 'Seven modules. One operating system.',
     subtitle:
-      'Clarity is not just an app. It is a complete system that watches your income, tracks your spending, and tells you one simple thing every morning — how much you can safely spend today.',
+      'iRREGO is not just an app. It is a complete system that watches your income, tracks your spending, and tells you one simple thing every morning — how much you can safely spend today.',
     items: [
-      { n: '01', t: 'Safe Spending Today', d: 'Every morning, Clarity calculates one number based on your actual balance, your upcoming bills, and your income history. That number is what you can spend today without risking tomorrow.', spec: 'OUTPUT  · DAILY  · AUTO-CALCULATED' },
-      { n: '02', t: 'Income Tracking', d: 'Log every payment you receive — client transfers, freelance invoices, UPI payments. Clarity learns your earning pattern over time and uses it to protect you in slow months.', spec: 'Supports irregular payments · Learns your pattern' },
-      { n: '03', t: 'Expense Tracking', d: 'Clarity separates your fixed costs — rent, EMI, subscriptions — from your flexible spending. It protects the fixed ones first, so you never accidentally spend money that was already committed.', spec: 'Fixed costs protected first · Flexible spending tracked' },
-      { n: '04', t: 'Goal Planning', d: 'Set a goal — emergency fund, new phone, vacation. Clarity automatically decides how much to put toward it each month based on what you actually earned. Good month? Faster progress. Slow month? The goal adjusts, not your stress.', spec: 'Auto-adjusts to your income · No manual budgeting' },
-      { n: '05', t: 'Emergency Fund Planning', d: 'Clarity tracks how many months you can survive if income stops completely. It shows you your runway in plain numbers and builds your emergency buffer into every calculation automatically.', spec: 'Shown in months of runway · Built into daily calculation' },
-      { n: '06', t: 'Smart Insights', d: 'Clarity quietly notices things you would never track manually — which months are always low, which clients pay late, where your money actually goes. It shows you patterns, not just numbers.', spec: 'Pattern detection · low-noise' },
+      { n: '01', t: 'Safe Spending Today', d: 'Every morning, iRREGO calculates one number based on your actual balance, your upcoming bills, and your income history. That number is what you can spend today without risking tomorrow.', spec: 'OUTPUT  · DAILY  · AUTO-CALCULATED' },
+      { n: '02', t: 'Income Tracking', d: 'Log every payment you receive — client transfers, freelance invoices, UPI payments. iRREGO learns your earning pattern over time and uses it to protect you in slow months.', spec: 'Supports irregular payments · Learns your pattern' },
+      { n: '03', t: 'Expense Tracking', d: 'iRREGO separates your fixed costs — rent, EMI, subscriptions — from your flexible spending. It protects the fixed ones first, so you never accidentally spend money that was already committed.', spec: 'Fixed costs protected first · Flexible spending tracked' },
+      { n: '04', t: 'Goal Planning', d: 'Set a goal — emergency fund, new phone, vacation. iRREGO automatically decides how much to put toward it each month based on what you actually earned. Good month? Faster progress. Slow month? The goal adjusts, not your stress.', spec: 'Auto-adjusts to your income · No manual budgeting' },
+      { n: '05', t: 'Emergency Fund Planning', d: 'iRREGO tracks how many months you can survive if income stops completely. It shows you your runway in plain numbers and builds your emergency buffer into every calculation automatically.', spec: 'Shown in months of runway · Built into daily calculation' },
+      { n: '06', t: 'Smart Insights', d: 'iRREGO quietly notices things you would never track manually — which months are always low, which clients pay late, where your money actually goes. It shows you patterns, not just numbers.', spec: 'Pattern detection · low-noise' },
       { n: '07', t: 'Financial Health Score', d: 'One score from 0 to 100 that tells you how healthy your finances actually are right now — combining your buffer, your runway, your income stability, and your goal progress into a single honest number.', spec: 'Single score · Updates as your situation changes' },
     ],
   },
 
   howItWorks: {
     label: 'How It Works',
-    title: 'How Clarity works for you..',
+    title: 'How iRREGO works for you..',
     subtitle:
-      'You just log your income and expenses. Clarity does everything else — automatically, every single day.',
+      'You just log your income and expenses. iRREGO does everything else — automatically, every single day.',
     steps: [
-      { n: '01', t: 'Track Income', d: 'Every time money comes in — a client payment, a freelance invoice, a UPI transfer — log it in Clarity. No categories to fill. No forms to complete. Just the amount and who paid you.' },
+      { n: '01', t: 'Track Income', d: 'Every time money comes in — a client payment, a freelance invoice, a UPI transfer — log it in iRREGO. No categories to fill. No forms to complete. Just the amount and who paid you.' },
       { n: '02', t: 'Track Expenses', d: 'Log what you spend. Floww automatically separates your fixed costs — rent, EMI, recharge — from your flexible spending like food and shopping. Your committed bills are always protected first.' },
-      { n: '03', t: 'Clarity Learns Your Pattern', d: 'After a few weeks, Clarity understands your money pattern. It knows your slow months, your strong months, and your fixed commitments. This is what makes the daily number accurate instead of generic.' },
-      { n: '04', t: 'You Get One Number Every Morning', d: 'Every morning, Clarity shows you exactly how much you can spend today without putting tomorrow at risk. Your rent is safe. Your emergency fund is building. Your goals are on track. One number. No stress.' },
-      { n: '05', t: 'You Stop Guessing. You Start Knowing.', d: 'Most freelancers and gig workers spend their whole life anxious about money — not because they earn too little, but because they never know where they stand. Clarity fixes that. After 30 days, most users report feeling in control of their finances for the first time.' },
+      { n: '03', t: 'iRREGO Learns Your Pattern', d: 'After a few weeks, iRREGO understands your money pattern. It knows your slow months, your strong months, and your fixed commitments. This is what makes the daily number accurate instead of generic.' },
+      { n: '04', t: 'You Get One Number Every Morning', d: 'Every morning, iRREGO shows you exactly how much you can spend today without putting tomorrow at risk. Your rent is safe. Your emergency fund is building. Your goals are on track. One number. No stress.' },
+      { n: '05', t: 'You Stop Guessing. You Start Knowing.', d: 'Most freelancers and gig workers spend their whole life anxious about money — not because they earn too little, but because they never know where they stand. iRREGO fixes that. After 30 days, most users report feeling in control of their finances for the first time.' },
     ],
   },
 
@@ -147,12 +147,12 @@ const en = {
       ' Like most people in their age, We started earning early — not from a job, but from the internet. Freelance projects, social media work, client payments. Some months were good. Some months were silent.',
       'The problem was never how much We earned. The problem was never knowing how much we could safely spend today. A good month would feel like freedom. Then rent and subscriptions would hit together, and suddenly the math did not add up.',
       'Every budgeting app we tried asked the same first question: what is our monthly income? we did not have one. Nobody building for the gig economy/Unstable Income seemed to understand that.',
-      'So we stopped looking for an app and started building one. Clarity is what we wish had existed when they needed it most.',
+      'So we stopped looking for an app and started building one. iRREGO is what we wish had existed when they needed it most.',
     ],
     whyLabel: 'Why We Exist',
     whyTitle: 'Irregular earners deserve better financial tools.',
     whyBody:
-      'India has over 15 million freelancers and more than 7 million registered gig workers on platforms like Swiggy, Zomato, Urban Company, and Fiverr. That number is growing every year. Yet every personal finance app in the Indian market still assumes a fixed monthly salary. Floww is built specifically for people whose income arrives in bursts — and who deserve the same financial clarity as everyone else.',
+      'India has over 15 million freelancers and more than 7 million registered gig workers on platforms like Swiggy, Zomato, Urban Company, and Fiverr. That number is growing every year. Yet every personal finance app in the Indian market still assumes a fixed monthly salary. Floww is built specifically for people whose income arrives in bursts — and who deserve the same financial iRREGO as everyone else.',
     missionLabel: 'Mission',
     mission:
       'Help millions of people achieve financial stability despite unpredictable income.',
@@ -163,7 +163,7 @@ const en = {
     values: [
       { t: 'Simplicity', d: 'One number every morning. No spreadsheets, no categories, no confusion.' },
       { t: 'Trust', d: 'Earned through transparency, never assumed or demanded.' },
-      { t: 'Transparency', d: 'We explain exactly how Clarity calculates your daily number. No black box.' },
+      { t: 'Transparency', d: 'We explain exactly how iRREGO calculates your daily number. No black box.' },
       { t: 'Privacy', d: 'Your income, your expenses, your data. We never sell it, share it, or use it for ads.' },
       { t: 'Long-term thinking', d: 'We are building for the 50 million irregular earners India will have by 2030.' },
     ],
@@ -171,15 +171,15 @@ const en = {
 
   waitlist: {
     label: 'JOIN THE WAITLIST',
-    title: 'Clarity is launching soon. Get your spot now.',
-    body: 'We are two founders from Varanasi building the finance app Indian freelancers and gig workers actually need. Join the waitlist and we will notify you the moment Clarity goes live.',
+    title: 'iRREGO is launching soon. Get your spot now.',
+    body: 'We are two founders from Varanasi building the finance app Indian freelancers and gig workers actually need. Join the waitlist and we will notify you the moment iRREGO goes live.',
     benefitsLabel: 'What you get',
     benefits: [
       { t: 'Early Access', d: 'You get the app before the public launch.' },
       { t: 'Beta Testing', d: 'Help us improve the app before it goes live. Your feedback shapes the product.' },
-      { t: 'Product Notification ', d: 'One email when Clarity is live. No spam before that.' },
+      { t: 'Product Notification ', d: 'One email when iRREGO is live. No spam before that.' },
       { t: 'Founder Updates', d: ' Occasional notes from Amit and Hariom on what we are building and why.' },
-      { t: 'Free Premium Trial ', d: 'Early waitlist members get 3 months of Clarity premium free at launch.' },
+      { t: 'Free Premium Trial ', d: 'Early waitlist members get 3 months of iRREGO premium free at launch.' },
     ],
     form: {
       name: 'Name',
@@ -191,7 +191,7 @@ const en = {
       submit: 'Join the waitlist',
       loading: 'Joining…',
       successTitle: "You're on the list.",
-      successBody: "We'll keep you updated as we build the future of financial clarity.",
+      successBody: "We'll keep you updated as we build the future of financial iRREGO.",
       again: '← Add another',
       countLabel: 'people on the list',
       errName: 'Please enter your name.',
@@ -222,14 +222,14 @@ const en = {
 
       { q: 'Who is it built for?', a: 'For Unstable Income Users, Freelancers, creators, designers, developers, consultants, agency owners, gig workers, delivery partners, self-employed professionals and students with side income — anyone whose income does not arrive on a fixed schedule.' },
       { q: 'Why not use spreadsheets?', a: 'Spreadsheets are manual and backward-looking. They record what happened, but they do not compute what is safe to do next. For an irregular earner, the question is never "what did I spend last month" — it is "how much can I spend today without breaking my runway." That requires a system, not a grid.' },
-      { q: 'How is this different from expense trackers?', a: 'Expense trackers tell you what you already spent. That is looking backward. Clarity tells you what you can safely spend today — that is looking forward. The difference is the same as a rear-view mirror versus a windshield. Both matter, but only one helps you avoid the crash.' },
-      { q: 'Is my data secure?', a: 'Yes. Clarity is built on Supabase, an industry-standard secure cloud platform. Your data is encrypted and stored safely. We do not sell it, share it, or use it for advertising. You can delete your entire account and all your data permanently at any time from the app settings.' },
+      { q: 'How is this different from expense trackers?', a: 'Expense trackers tell you what you already spent. That is looking backward. iRREGO tells you what you can safely spend today — that is looking forward. The difference is the same as a rear-view mirror versus a windshield. Both matter, but only one helps you avoid the crash.' },
+      { q: 'Is my data secure?', a: 'Yes. iRREGO is built on Supabase, an industry-standard secure cloud platform. Your data is encrypted and stored safely. We do not sell it, share it, or use it for advertising. You can delete your entire account and all your data permanently at any time from the app settings.' },
       { q: 'When is the launch?', a: 'Early access is opening soon. The core engine is in private testing now. Join the waitlist to be notified the moment it opens.' },
       { q: 'Will there be a mobile app?', a: 'Yes. The system is being built cross-platform from day one — a native mobile app for daily use and a web dashboard for the deeper view.' },
       { q: 'Will there be a web dashboard?', a: 'Yes. A web dashboard is planned so you can check your finances from any browser, not just your phone. The website you are reading right now is the beginning of that. Full dashboard access will be available after launch.' },
-      { q: 'Will it remain free?', a: 'Clarity will launch as a free app with core features available to everyone. A premium plan with advanced insights, goal tracking, and financial health scoring will be available at a small monthly fee. Everyone on the waitlist gets 3 months of premium free when we launch.' },
-      { q: ' Is this app only for English speakers?', a: 'Clarity currently supports English. Hindi and regional language support is on our roadmap. If you want Hindi support prioritized, tell us when you join the waitlist.' },
-      { q: '  I am a student with a part-time income. Is Floww for me', a: 'Yes. If you earn from freelancing, tutoring, YouTube, Instagram, or any irregular source — Clarity is built for you. You do not need a fixed salary to use it. You just need income that varies, which is exactly the problem Floww solves.' },
+      { q: 'Will it remain free?', a: 'iRREGO will launch as a free app with core features available to everyone. A premium plan with advanced insights, goal tracking, and financial health scoring will be available at a small monthly fee. Everyone on the waitlist gets 3 months of premium free when we launch.' },
+      { q: ' Is this app only for English speakers?', a: 'iRREGO currently supports English. Hindi and regional language support is on our roadmap. If you want Hindi support prioritized, tell us when you join the waitlist.' },
+      { q: '  I am a student with a part-time income. Is Floww for me', a: 'Yes. If you earn from freelancing, tutoring, YouTube, Instagram, or any irregular source — iRREGO is built for you. You do not need a fixed salary to use it. You just need income that varies, which is exactly the problem Floww solves.' },
     ],
   },
 
@@ -592,12 +592,12 @@ const I18nContext = createContext<I18nContextValue>({
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<string>(() => {
     if (typeof window === 'undefined') return brand.defaultLang;
-    return localStorage.getItem('clarity-lang') || brand.defaultLang;
+    return localStorage.getItem('iRREGO-lang') || brand.defaultLang;
   });
 
   useEffect(() => {
     document.documentElement.lang = lang;
-    localStorage.setItem('clarity-lang', lang);
+    localStorage.setItem('iRREGO-lang', lang);
   }, [lang]);
 
   const setLang = (l: string) => setLangState(l);
