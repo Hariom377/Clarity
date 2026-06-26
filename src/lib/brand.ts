@@ -11,21 +11,21 @@
 
 export const brand = {
   /** Display name shown in nav, footer, and <title>. */
-  name: 'Clarity',
+  name: 'iRREGO',
   /** Short badge shown next to the name (e.g. "OS"). */
-  suffix: 'OS',
+  suffix: 'i',
   /** Single-letter or short mark used in the logo + favicon. */
-  mark: 'C',
+  mark: 'R',
   /** Public domain (used for emails, SEO canonical, sitemap). */
-  domain: 'clarity.os',
+  domain: 'iRREGO.live',
   /** Default site language code. */
   defaultLang: 'en',
 
   /** Contact channels. */
   email: {
-    general: 'hello@clarity.os',
-    partnerships: 'partners@clarity.os',
-    support: 'support@clarity.os',
+    general: 'hello@iRREGO.live',
+    partnerships: 'partners@iRREGO.live',
+    support: 'support@iRREGO.live',
   },
 
   /** Currency used in all product mockups and previews. */
@@ -44,8 +44,8 @@ export const brand = {
 
   /** Social profiles (leave empty string to hide). */
   social: {
-    twitter: 'https://twitter.com/clarityos',
-    linkedin: 'https://linkedin.com/company/clarityos',
+    twitter: 'https://twitter.com/iRREGOos',
+    linkedin: 'https://linkedin.com/company/iRREGOos',
   },
 
   /** Open Graph / social share image path. */
