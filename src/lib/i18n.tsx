@@ -61,11 +61,11 @@ const en = {
   problem: {
     label: 'The Reality',
     title: 'Every finance app assumes you get paid on the 1st Day Of Each Month.',
-    body1:
+   body1:
       'You dont One month you earn ₹65,000. The next brings ₹18,000. Standard budgeting apps break the moment your income drops — because they were never built for you.',
-    // body2:
-    //   'Traditional budgeting tools break the moment your income drops. They were never built for a world where one month brings ₹65,000 and the next brings ₹18,000.',
-    // monthLabel: 'Monthly income',
+    body2:
+      'Traditional budgeting tools break the moment your income drops. They were never built for a world where one month brings ₹65,000 and the next brings ₹18,000.',
+    monthLabel: 'Monthly income',
     failLabel: 'Why traditional apps fail',
     failTitle: 'Built for salaries. Not for you.',
     failPoints: [
