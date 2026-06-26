@@ -1,5 +1,5 @@
-import { motion, useInView, Variants } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { motion, Variants } from "framer-motion";
+import { useEffect, useState } from "react";
 import { AnimatedNumber } from './AnimatedNumber';
 import { brand } from '../lib/brand';
 import { useI18n } from '../lib/i18n';
@@ -8,39 +8,54 @@ export default function ProductMockup() {
   const { t } = useI18n();
   const sym = brand.currency.symbol;
   
-  const containerRef = useRef<HTMLDivElement>(null);
-  const isVisible = useInView(containerRef, { once: true, amount: 0.2 });
-  
+  // Controlled sequential phases for deliberate timing
   const [phase, setPhase] = useState<"idle" | "cursor-entering" | "clicking" | "revealed">("idle");
 
   useEffect(() => {
-    if (isVisible && phase === "idle") {
+    // Phase 1: Wait for parent reveal fade-in to settle completely
+    const startTimer = setTimeout(() => {
       setPhase("cursor-entering");
-    }
-  }, [isVisible, phase]);
+    }, 800);
 
-  // Explicit type assignment prevents the Cloudflare compiler from failing on string properties
+    // Phase 2: Wait for cursor to finish its crawl path, then press click down
+    const clickTimer = setTimeout(() => {
+      setPhase("clicking");
+    }, 2400); // 800ms initial delay + 1600ms transition time
+
+    // Phase 3: Hold the clicked state briefly, then paint dashboard screen
+    const revealTimer = setTimeout(() => {
+      setPhase("revealed");
+    }, 2650); 
+
+    return () => {
+      clearTimeout(startTimer);
+      clearTimeout(clickTimer);
+      clearTimeout(revealTimer);
+    };
+  }, []);
+
+  // Explicit type assignment ensures error-free Cloudflare compiling checks
   const cursorVariants: Variants = {
-    idle: { x: 320, y: 220, opacity: 0 },
+    idle: { x: 380, y: 260, opacity: 0 },
     entering: {
-      x: [320, 190],
-      y: [220, 110],
-      opacity: [0, 1, 1],
-      transition: { duration: 1.4, ease: "easeInOut" }
+      x: 180,
+      y: 115,
+      opacity: 1,
+      transition: { duration: 1.6, ease: "easeInOut" }
     },
     clicking: {
-      x: 190,
-      y: 110,
+      x: 180,
+      y: 115,
       opacity: 1,
-      scale: 0.85,
-      transition: { duration: 0.12 }
+      scale: 0.8,
+      transition: { duration: 0.1 }
     }
   };
 
   return (
-    <div ref={containerRef} className="relative w-full overflow-hidden select-none">
+    <div className="relative w-full overflow-hidden select-none">
       
-      {/* ===== PHASE 1 & 2: LOGIN WORKSPACE TERMINAL ===== */}
+      {/* ===== WORKSPACE LOCK SCREEN TERMINAL ===== */}
       {phase !== "revealed" && (
         <div className="flex h-[420px] w-full flex-col items-center justify-center rounded-xl border border-line2 bg-card shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)] p-6">
           <div className="w-full max-w-[260px] space-y-4 text-center">
@@ -49,18 +64,10 @@ export default function ProductMockup() {
             
             <motion.button
               animate={
-                phase === "cursor-entering" 
-                  ? { scale: 1 } 
-                  : phase === "clicking" 
-                    ? { scale: 0.96, filter: "brightness(0.85)" } 
-                    : {}
+                phase === "clicking" 
+                  ? { scale: 0.94, filter: "brightness(0.75)" } 
+                  : { scale: 1 }
               }
-              onAnimationComplete={() => {
-                if (phase === "cursor-entering") {
-                  setPhase("clicking");
-                  setTimeout(() => setPhase("revealed"), 180);
-                }
-              }}
               className="w-full rounded-md bg-paper px-5 py-3 text-[14px] font-medium text-ink transition-colors"
             >
               Log In securely
@@ -69,15 +76,15 @@ export default function ProductMockup() {
         </div>
       )}
 
-      {/* ===== PHASE 3: AUTHENTICATED REAL-TIME DASHBOARD ===== */}
+      {/* ===== THE ACTIVE DASHBOARD CARD ===== */}
       {phase === "revealed" && (
         <motion.div
           initial={{ opacity: 0, y: 15, filter: "blur(4px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.45, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="w-full overflow-hidden rounded-xl border border-line2 bg-card shadow-[0_0_0_1px_rgba(255,255,255,0.02),0_40px_80px_-20px_rgba(0,0,0,0.8)]"
         >
-          {/* Header Bar */}
+          {/* Header Metric Bar */}
           <div className="flex items-center justify-between border-b border-line px-4 py-3">
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-line2" />
@@ -91,20 +98,20 @@ export default function ProductMockup() {
             </span>
           </div>
 
-          {/* Safe Spend Module */}
+          {/* Core Safe Spend Display */}
           <div className="border-b border-line px-5 py-6">
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">{t.hero.mockup.safeSpend}</p>
-            <p className="mt-2 font-mono text-[42px] font-medium leading-none tracking-[-0.02em] text-paper">
+            <div className="mt-2 font-mono text-[42px] font-medium leading-none tracking-[-0.02em] text-paper">
               {sym}<AnimatedNumber value={8470} locale={brand.currency.locale} />
               <span className="text-faint">.00</span>
-            </p>
+            </div>
             <div className="mt-3 flex items-center gap-2 font-mono text-[10px] text-muted">
               <span className="h-1.5 w-1.5 rounded-full bg-paper" />
               {t.hero.mockup.updated}
             </div>
           </div>
 
-          {/* Metric Grid Display */}
+          {/* Secondary Metric Items */}
           <div className="grid grid-cols-3 divide-x divide-line border-b border-line">
             {[
               { label: t.hero.mockup.balance, value: `${sym}84,200` },
@@ -118,7 +125,7 @@ export default function ProductMockup() {
             ))}
           </div>
 
-          {/* Target Milestone Progression Rows */}
+          {/* Goal Milestones Progression */}
           <div className="px-5 py-5">
             <div className="flex items-center justify-between">
               <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">{t.hero.mockup.goals}</p>
@@ -138,7 +145,7 @@ export default function ProductMockup() {
                     <motion.div 
                       initial={{ width: 0 }}
                       animate={{ width: `${g.pct}%` }}
-                      transition={{ type: "spring", stiffness: 40, damping: 14, delay: 0.25 }}
+                      transition={{ type: "spring", stiffness: 45, damping: 15, delay: 0.2 }}
                       className="h-full bg-paper" 
                     />
                   </div>
@@ -149,12 +156,12 @@ export default function ProductMockup() {
         </motion.div>
       )}
 
-      {/* ===== VIRTUALIZED DESKTOP MOUSE CURSOR ===== */}
-      {phase !== "revealed" && phase !== "idle" && (
+      {/* ===== SIMULATED POINTER ASSET CONTAINER ===== */}
+      {phase !== "revealed" && (
         <motion.div
           variants={cursorVariants}
           initial="idle"
-          animate={phase === "cursor-entering" ? "entering" : "clicking"}
+          animate={phase === "idle" ? "idle" : "entering"}
           className="absolute pointer-events-none z-50 top-0 left-0"
         >
           <svg width="18" height="18" viewBox="0 0 20 20" fill="none" className="drop-shadow-2xl">
