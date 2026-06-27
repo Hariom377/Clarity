@@ -14,8 +14,8 @@ export default function Logo({ onClick }: { onClick?: () => void }) {
       <span className="text-[17px] font-semibold tracking-[-0.02em] text-paper">{brand.name.toUpperCase()}</span>
 
       
-      {/*   {brand.suffix && (
-        <span className="border border-line2 px-1.5 py-0.5 font-mono text-[9px] tracking-[0.15em] text-muted">
+         {brand.suffix && (
+       {/* <span className="border border-line2 px-1.5 py-0.5 font-mono text-[9px] tracking-[0.15em] text-muted">
           {brand.suffix} 
           
         </span>*/ }
