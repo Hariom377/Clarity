@@ -12,11 +12,11 @@
 export const brand = {
   /** Display name shown in nav, footer, and <title>. */
   name: 'iRREGO',
-  /** Short badge shown next to the name (e.g. "OS"). */
+  /** Short badge shown next to the name (e.g. "OS"). 
   suffix: 'R',
-  /** Single-letter or short mark used in the logo + favicon. */
+  Single-letter or short mark used in the logo + favicon. 
   mark: 'i',
-  /** Public domain (used for emails, SEO canonical, sitemap). */
+   Public domain (used for emails, SEO canonical, sitemap). */
   domain: 'iRREGO.live',
   /** Default site language code. */
   defaultLang: 'en',
