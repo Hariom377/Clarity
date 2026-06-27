@@ -1,9 +1,17 @@
 import { createClient } from '@supabase/supabase-js';
 import { triggerRestore } from './db-wake.js';
 
+// Swapped process.env with import.meta.env to allow Vite to map Cloudflare Dashboard variables
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || process.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY;
+
+if (!supabaseUrl || !supabaseAnonKey) {
+  console.error("CRITICAL: Supabase keys are completely uninitialized inside browser context.");
+}
+
 const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY,
+  supabaseUrl,
+  supabaseAnonKey,
   {
     global: {
       fetch: async (url, options) => {
