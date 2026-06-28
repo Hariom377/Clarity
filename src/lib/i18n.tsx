@@ -239,7 +239,7 @@ const en = {
     body: 'Whether you have a question, a partnership idea, or need support — we read every message.',
     categories: [
       { t: 'General Inquiries', d: 'Anything you want to know about the platform.' },
-      { t: 'Partnerships', d: 'Integrations, media, and collaboration opportunities.' },
+      //{ t: 'Partnerships', d: 'Integrations, media, and collaboration opportunities.' },
       { t: 'Support', d: 'Help with your account or the waitlist.' },
     ],
     form: {
