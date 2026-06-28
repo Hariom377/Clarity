@@ -24,7 +24,7 @@ export const brand = {
   /** Contact channels. */
   email: {
     general: 'irrego.online@gmail.com',
-    partnerships: ' ',
+    partnerships: 'Fill The Form',
     support: 'irrego.support@gmail.com',
   },
 
