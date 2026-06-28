@@ -17,15 +17,15 @@ export const brand = {
   /** Single-letter or short mark used in the logo + favicon. */
   mark: ' ',
    /** Public domain (used for emails, SEO canonical, sitemap). */
-  domain: 'iRREGO.live',
+  domain: 'irrego.online',
   /** Default site language code. */
   defaultLang: 'en',
 
   /** Contact channels. */
   email: {
-    general: 'hello@iRREGO.live',
-    partnerships: 'partners@iRREGO.live',
-    support: 'support@iRREGO.live',
+    general: 'irrego.online@gmail.com',
+    //partnerships: 'partners@iRREGO.live',
+    support: 'irrego.support@gmail.com',
   },
 
   /** Currency used in all product mockups and previews. */
