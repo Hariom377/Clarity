@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://clarity.os/sitemap.xml
+Sitemap: https://irrego.online/sitemap.xml
