@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Reveal } from '../components/Reveal';
 import { SectionLabel } from '../components/SectionLabel';
 import ProductMockup from '../components/ProductMockup';
+import SEO from "../components/SEO";
 import { useI18n } from '../lib/i18n';
 import { brand } from '../lib/brand';
 
@@ -18,6 +19,15 @@ export default function Home() {
   const maxAmt = 65000;
 
   return (
+
+<>
+  <SEO
+    title="iRREGO | Personal Finance Companion for Irregular Income"
+    description="Know exactly how much you can safely spend today. iRREGO helps freelancers, creators, gig workers and self-employed professionals manage irregular income, budget smarter, track expenses and achieve financial freedom."
+    canonical="https://irrego.online/"
+  />
+
+    
     <div>
       {/* ===== HERO ===== */}
       <section className="relative px-5 pt-32 pb-20 sm:px-8 sm:pt-40 sm:pb-28">
@@ -163,5 +173,6 @@ export default function Home() {
         </div>
       </section>
     </div>
+  </>
   );
 }
