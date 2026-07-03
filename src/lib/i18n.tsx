@@ -64,7 +64,7 @@ const en = {
    body1:
       'Most budgeting apps assume you receive the same salary every month.',
     body2:
-      '— But freelancers, creators, gig workers, delivery partners, and self-employed professionals earn differently. Some months are great, others are unpredictable. Without knowing how much you can safely spend today, its easy to overspend, delay savings, or struggle before the next payment arrives.',
+      '— But Some months are great, others are unpredictable. Without knowing how much you can safely spend today, its easy to overspend, delay savings, or struggle before the next payment arrives.',
     monthLabel: 'Monthly income',
     failLabel: 'Why traditional apps fail',
     failTitle: 'Built for salaries. Not for you.',
