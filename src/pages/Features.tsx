@@ -3,11 +3,21 @@ import { SectionLabel } from '../components/SectionLabel';
 import { FeaturePreview } from '../components/FeaturePreview';
 import { useI18n } from '../lib/i18n';
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 export default function Features() {
   const { t } = useI18n();
 
   return (
+<>
+<SEO
+title="Features | iRREGO - Budgeting App for Irregular Income"
+description="Explore iRREGO's powerful budgeting, income tracking, expense tracking, emergency fund planning, financial health score, and daily safe spending features built for freelancers, creators, gig workers, and self-employed professionals."
+canonical="https://irrego.online/features"
+/>
+
+<div>
+
     <div>
       <section className="px-5 pt-32 pb-16 sm:px-8 sm:pt-40">
         <div className="mx-auto max-w-[1280px]">
@@ -94,5 +104,6 @@ Unlike traditional budgeting apps built for fixed salaries, iRREGO's features ar
 
       
     </div>
+  </>
   );
 }
