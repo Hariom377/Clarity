@@ -101,6 +101,21 @@ export default function Home() {
         </div>
       </section>
 
+<p className="mt-6 text-[16px] leading-relaxed text-muted">
+  Learn how our{" "}
+  <Link
+    to="/features"
+    className="text-paper underline underline-offset-4 hover:text-faint"
+  >
+    budgeting features
+  </Link>{" "}
+  are built specifically for people with irregular income.
+</p>
+
+
+
+      
+
       {/* ===== SOLUTION ===== */}
       <section className="border-t border-line px-5 py-24 sm:px-8 sm:py-32">
         <div className="mx-auto max-w-[1280px]">
@@ -126,6 +141,20 @@ export default function Home() {
         </div>
       </section>
 
+<p className="mt-6 text-[16px] leading-relaxed text-muted">
+  Discover exactly{" "}
+  <Link
+    to="/how-it-works"
+    className="text-paper underline underline-offset-4 hover:text-faint"
+  >
+    how iRREGO works
+  </Link>{" "}
+  to calculate your safe daily spending limit.
+</p>
+
+
+      
+
       {/* ===== TRUST ===== */}
       <section className="border-t border-line px-5 py-24 sm:px-8 sm:py-32">
         <div className="mx-auto max-w-[1280px]">
@@ -149,6 +178,20 @@ export default function Home() {
         </div>
       </section>
 
+
+<div className="mt-10">
+  <Link
+    to="/about"
+    className="text-paper underline underline-offset-4 hover:text-faint"
+  >
+    Learn more about why we built iRREGO →
+  </Link>
+</div>
+
+
+
+      
+
       {/* ===== CTA ===== */}
       <section className="border-t border-line px-5 py-24 sm:px-8 sm:py-32">
         <div className="mx-auto max-w-[1280px]">
@@ -158,6 +201,54 @@ export default function Home() {
               <h2 className="mt-6 max-w-[700px] text-[clamp(2rem,5vw,4rem)] font-semibold leading-[1] tracking-[-0.035em] text-balance">{t.cta.title}</h2>
               <p className="mt-5 max-w-[440px] text-[16px] leading-relaxed text-muted">{t.cta.body}</p>
               <Link to="/waitlist" className="mt-8 rounded-md bg-paper px-6 py-3.5 text-[15px] font-medium text-ink transition-colors hover:bg-[#e5e5e5]">{t.cta.button}</Link>
+
+
+
+
+
+              
+<div className="mt-6 flex flex-wrap justify-center gap-6 text-sm">
+
+  <Link
+    to="/features"
+    className="text-muted hover:text-paper"
+  >
+    Features
+  </Link>
+
+  <Link
+    to="/how-it-works"
+    className="text-muted hover:text-paper"
+  >
+    How It Works
+  </Link>
+
+  <Link
+    to="/faq"
+    className="text-muted hover:text-paper"
+  >
+    FAQ
+  </Link>
+
+  <Link
+    to="/about"
+    className="text-muted hover:text-paper"
+  >
+    About
+  </Link>
+
+  <Link
+    to="/contact"
+    className="text-muted hover:text-paper"
+  >
+    Contact
+  </Link>
+
+</div>
+
+
+
+              
             </div>
           </Reveal>
         </div>
