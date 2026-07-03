@@ -110,9 +110,9 @@ const en = {
 
   features: {
     label: 'Features',
-    title: 'Seven modules. One operating system.',
+    title: 'Features Built for People with Irregular Income.',
     subtitle:
-      'iRREGO is not just an app. It is a complete system that watches your income, tracks your spending, and tells you one simple thing every morning — how much you can safely spend today.',
+      'Explore the powerful features that help freelancers, creators, gig workers, self-employed professionals, and small business owners confidently manage irregular income, track expenses, plan savings, and know exactly how much they can safely spend today.',
     items: [
       { n: '01', t: 'Safe Spending Today', d: 'Every morning, iRREGO calculates one number based on your actual balance, your upcoming bills, and your income history. That number is what you can spend today without risking tomorrow.', spec: 'OUTPUT  · DAILY  · AUTO-CALCULATED' },
       { n: '02', t: 'Income Tracking', d: 'Log every payment you receive — client transfers, freelance invoices, UPI payments. iRREGO learns your earning pattern over time and uses it to protect you in slow months.', spec: 'Supports irregular payments · Learns your pattern' },
