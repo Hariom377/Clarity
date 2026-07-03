@@ -125,8 +125,8 @@ const en = {
   },
 
   howItWorks: {
-    label: 'How It Works',
-    title: 'How iRREGO works for you..',
+    label: 'How iRREGO Works',
+    title: 'How iRREGO Helps You Manage Irregular Income in 5 Simple Steps',
     subtitle:
       'You just log your income and expenses. iRREGO does everything else — automatically, every single day.',
     steps: [
@@ -139,33 +139,33 @@ const en = {
   },
 
   about: {
-    label: 'About',
-    title: 'Built by two students who ran out of money at the wrong time.',
+    label: 'Our Story',
+    title: 'Built by Two Founders Who Faced the Same Problem as Millions of Irregular Earners.',
     founderLabel: 'The Founders Story',
     founderStory: [
-      'It started with Two Irregular Income Guy — Hariom Dubey And Amit Sharma',
-      ' Like most people in their age, We started earning early — not from a job, but from the internet. Freelance projects, social media work, client payments. Some months were good. Some months were silent.',
+      'It started with Two Irregular Income Guy — Hariom And Amit with a simple question: "How much can I safely spend today?"',
+      'As freelancers and builders, we experienced the uncertainty of irregular income firsthand. Some months were great, while others were unpredictable. Traditional budgeting apps expected a fixed monthly salary, but our reality was completely different.',
       'The problem was never how much We earned. The problem was never knowing how much we could safely spend today. A good month would feel like freedom. Then rent and subscriptions would hit together, and suddenly the math did not add up.',
-      'Every budgeting app we tried asked the same first question: what is our monthly income? we did not have one. Nobody building for the gig economy/Unstable Income seemed to understand that.',
-      'So we stopped looking for an app and started building one. iRREGO is what we wish had existed when they needed it most.',
+      'After trying budgeting apps, spreadsheets, and manual calculations, we found none were designed for freelancers, creators, gig workers, or self-employed professionals with unpredictable income.',
+      'Thats why we started building iRREGO—a personal finance companion that helps people with irregular income understand their daily spending limit, manage cash flow, achieve financial goals, and build long-term financial stability.',
     ],
     whyLabel: 'Why We Exist',
-    whyTitle: 'Irregular earners deserve better financial tools.',
+    whyTitle: 'Financial tools should work for everyone—not just salaried employees.',
     whyBody:
-      'India has over 15 million freelancers and more than 7 million registered gig workers on platforms like Swiggy, Zomato, Urban Company, and Fiverr. That number is growing every year. Yet every personal finance app in the Indian market still assumes a fixed monthly salary. Floww is built specifically for people whose income arrives in bursts — and who deserve the same financial iRREGO as everyone else.',
+      'India has over 15 million freelancers and more than 7 million registered gig workers on platforms like Swiggy, Zomato, Urban Company, and Fiverr. That number is growing every year. Yet every personal finance app in the Indian market still assumes a fixed monthly salary. iRREGO is built specifically for people whose income arrives in bursts — and who deserve the same financial iRREGO as everyone else.',
     missionLabel: 'Mission',
     mission:
-      'Help millions of people achieve financial stability despite unpredictable income.',
+      'Help millions of people with irregular income make smarter financial decisions every day.',
     visionLabel: 'Vision',
     vision:
-      'To become the default financial layer for every freelancer, creator, and gig worker in India — as natural and essential as a UPI app.',
+      'Become the worlds most trusted personal finance platform for freelancers, creators, gig workers, and self-employed professionals.',
     valuesLabel: 'Values',
     values: [
-      { t: 'Simplicity', d: 'One number every morning. No spreadsheets, no categories, no confusion.' },
-      { t: 'Trust', d: 'Earned through transparency, never assumed or demanded.' },
+      { t: 'Simplicity', d: 'Personal finance should be simple enough that anyone can understand it in seconds.' },
+      { t: 'Trust', d: 'We earn trust by protecting user privacy, being transparent, and always putting users first.' },
       { t: 'Transparency', d: 'We explain exactly how iRREGO calculates your daily number. No black box.' },
       { t: 'Privacy', d: 'Your income, your expenses, your data. We never sell it, share it, or use it for ads.' },
-      { t: 'Long-term thinking', d: 'We are building for the 50 million irregular earners India will have by 2030.' },
+      { t: 'Long-term thinking', d: 'We are building iRREGO to serve the next generation of freelancers and irregular earners for decades to come.' },
     ],
   },
 
