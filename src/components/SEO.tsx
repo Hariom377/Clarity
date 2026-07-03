@@ -4,44 +4,61 @@ type SEOProps = {
   title: string;
   description: string;
   canonical: string;
+  image?: string;
 };
 
 export default function SEO({
   title,
   description,
   canonical,
+  image = "https://irrego.online/og-image.jpg",
 }: SEOProps) {
   useEffect(() => {
     document.title = title;
 
-    const setMeta = (name: string, content: string) => {
-      let tag = document.querySelector(
-        `meta[name="${name}"]`
+    const setMeta = (
+      selector: string,
+      attribute: "name" | "property",
+      content: string
+    ) => {
+      let tag = document.head.querySelector(
+        `meta[${attribute}="${selector}"]`
       ) as HTMLMetaElement;
 
       if (!tag) {
         tag = document.createElement("meta");
-        tag.name = name;
+        tag.setAttribute(attribute, selector);
         document.head.appendChild(tag);
       }
 
       tag.content = content;
     };
 
-    setMeta("description", description);
+    setMeta("description", "name", description);
 
-    let link = document.querySelector(
+    setMeta("og:title", "property", title);
+    setMeta("og:description", "property", description);
+    setMeta("og:type", "property", "website");
+    setMeta("og:url", "property", canonical);
+    setMeta("og:image", "property", image);
+
+    setMeta("twitter:card", "name", "summary_large_image");
+    setMeta("twitter:title", "name", title);
+    setMeta("twitter:description", "name", description);
+    setMeta("twitter:image", "name", image);
+
+    let canonicalTag = document.querySelector(
       'link[rel="canonical"]'
     ) as HTMLLinkElement;
 
-    if (!link) {
-      link = document.createElement("link");
-      link.rel = "canonical";
-      document.head.appendChild(link);
+    if (!canonicalTag) {
+      canonicalTag = document.createElement("link");
+      canonicalTag.rel = "canonical";
+      document.head.appendChild(canonicalTag);
     }
 
-    link.href = canonical;
-  }, [title, description, canonical]);
+    canonicalTag.href = canonical;
+  }, [title, description, canonical, image]);
 
   return null;
 }
