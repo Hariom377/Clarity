@@ -19,14 +19,6 @@ export default function Home() {
   const maxAmt = 65000;
 
   return (
-
-<>
-  <SEO
-    title="iRREGO | Personal Finance Companion for Irregular Income"
-    description="Know exactly how much you can safely spend today. iRREGO helps freelancers, creators, gig workers and self-employed professionals manage irregular income, budget smarter, track expenses and achieve financial freedom."
-    canonical="https://irrego.online/"
-  />
-
     
     <div>
       {/* ===== HERO ===== */}
@@ -173,6 +165,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  </>
   );
 }
