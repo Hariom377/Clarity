@@ -2,6 +2,7 @@ import { Reveal } from '../components/Reveal';
 import { SectionLabel } from '../components/SectionLabel';
 import { FeaturePreview } from '../components/FeaturePreview';
 import { useI18n } from '../lib/i18n';
+import { Link } from "react-router-dom";
 
 export default function Features() {
   const { t } = useI18n();
@@ -30,8 +31,21 @@ export default function Features() {
                     <span className="font-mono text-[11px] tracking-[0.15em] text-faint">MODULE {m.n}</span>
                     <span className="h-1.5 w-1.5 rounded-full bg-line2 transition-colors group-hover:bg-paper" />
                   </div>
-                  <h3 className="mt-4 text-[20px] font-medium tracking-[-0.01em] text-paper">{m.t}</h3>
+                  <h2 className="mt-4 text-[20px] font-medium tracking-[-0.01em] text-paper">{m.t}</h2>
                   <p className="mt-2.5 text-[14px] leading-relaxed text-muted">{m.d}</p>
+
+
+<h2 className="mb-10 text-3xl font-semibold text-paper">
+  Why iRREGO Features Are Different
+</h2>
+
+<p className="mb-12 max-w-3xl text-muted">
+Unlike traditional budgeting apps built for fixed salaries, iRREGO's features are designed specifically for freelancers, creators, gig workers, self-employed professionals, and anyone with irregular income. Every feature works together to help you spend safely, save consistently, and build long-term financial stability.
+</p>
+
+
+                  
+                  
                   {/* Interactive UI preview */}
                   <div className="mt-5"><FeaturePreview index={i} /></div>
                   <div className="mt-5 border-t border-line pt-3">
@@ -43,6 +57,42 @@ export default function Features() {
           </div>
         </div>
       </section>
+
+
+
+
+
+<section className="border-t border-line px-5 py-20 sm:px-8">
+  <div className="mx-auto max-w-[900px] text-center">
+    <h2 className="text-3xl font-semibold">
+      Learn More About iRREGO
+    </h2>
+
+    <p className="mt-4 text-muted">
+      Discover how iRREGO helps people with irregular income manage money with confidence.
+    </p>
+
+    <div className="mt-8 flex flex-wrap justify-center gap-4">
+      <Link to="/how-it-works" className="underline">
+        How It Works
+      </Link>
+
+      <Link to="/faq" className="underline">
+        Frequently Asked Questions
+      </Link>
+
+      <Link to="/waitlist" className="underline">
+        Join the Waitlist
+      </Link>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+      
     </div>
   );
 }
