@@ -15,10 +15,7 @@ title="Features | iRREGO - Budgeting App for Irregular Income"
 description="Explore iRREGO's powerful budgeting, income tracking, expense tracking, emergency fund planning, financial health score, and daily safe spending features built for freelancers, creators, gig workers, and self-employed professionals."
 canonical="https://irrego.online/features"
 />
-
 <div>
-
-    <div>
       <section className="px-5 pt-32 pb-16 sm:px-8 sm:pt-40">
         <div className="mx-auto max-w-[1280px]">
           <Reveal><SectionLabel>{t.features.label}</SectionLabel></Reveal>
