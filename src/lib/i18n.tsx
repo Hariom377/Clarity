@@ -37,10 +37,10 @@ const en = {
 
   hero: {
     label: 'FINANCIAL OS FOR IRREGULAR EARNERS',
-    title: 'Know Exactly How Much You Can Safely Spend Today.',
+    title: 'The Personal Finance System for People with Irregular Income',
 
     subtitle:
-      'iRREGO is built for freelancers, creators, self-employed professionals and gig workers in India whose income never arrives on a fixed date. One number. Every day. No guessing.',
+      'Know exactly how much you can safely spend today based on your income pattern, spending history, and available balance. Built for freelancers, creators, gig workers, self-employed professionals, and anyone with unpredictable income.',
 
 
     ctaPrimary: 'Join Waitlist',
@@ -60,28 +60,28 @@ const en = {
 
   problem: {
     label: 'The Reality',
-    title: 'Every finance app assumes you get paid on the 1st Day Of Each Month.',
+    title: 'Traditional Budgeting Doesnt Work When Your Income Changes Every Month.',
    body1:
-      'One month you earn ₹65,000. The next brings ₹18,000. Standard budgeting apps break the moment your income drops.',
+      'Most budgeting apps assume you receive the same salary every month.',
     body2:
-      '— because they were never built for your Unstable Income.',
+      '— But freelancers, creators, gig workers, delivery partners, and self-employed professionals earn differently. Some months are great, others are unpredictable. Without knowing how much you can safely spend today, its easy to overspend, delay savings, or struggle before the next payment arrives.',
     monthLabel: 'Monthly income',
     failLabel: 'Why traditional apps fail',
     failTitle: 'Built for salaries. Not for you.',
     failPoints: [
-      'Assume you earn the same amount every month.',
-      'Give you a fixed budget that collapses in a slow month.',
-      'Show you last month data when you need to know about today.',
+      'Assume fixed monthly salary.',
+      'Ignore changing cash flow.',
+      'Dont calculate safe daily spending.',
     ],
   },
 
   solution: {
-    label: 'The Solution',
-    title: 'One number that adjusts to your reality. Every single day.',
+    label: 'Meet iRREGO',
+    title: 'A personal finance system designed specifically for irregular income.',
     body1:
       'iRREGO reads your income history, calculates your volatility, and tells you exactly how much is safe to spend today — protecting your rent, your goals, and your future in the process.',
     body2:
-      'No budget categories. No spreadsheets. Just one answer to the only question that matters. How much can I safely spend today?',
+      '- To help you to understand your finance and staying on track toward your goals.',
     points: [
       { t: 'Income-aware', d: 'Built around your actual income pattern, not a assumed monthly average.' },
       { t: 'Daily safe spend', d: 'One recalculated number every morning so you never overspend by accident.' },
