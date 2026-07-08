@@ -19,7 +19,7 @@ import { brand } from './brand';
  * ---------------------------------------------------------------- */
 const en = {
   meta: {
-    title: `${brand.name} — Financial Operating System for Irregular Earners`,
+    title: `${brand.name} — Financial App for Irregular Earners`,
     description: brand.description,
   },
 
@@ -36,11 +36,11 @@ const en = {
   },
 
   hero: {
-    label: 'FINANCIAL OS FOR IRREGULAR EARNERS',
-    title: 'The Personal Finance System for People with Irregular Income',
+    label: 'FINANCIAL APP FOR IRREGULAR EARNERS',
+    title: 'The Personal Finance App for People with Unstable Income',
 
     subtitle:
-      'Know exactly how much you can safely spend today based on your income pattern, spending history, and available balance. Built for freelancers, creators, gig workers, self-employed professionals, and anyone with unpredictable income.',
+      'Know exactly how much you can safely spend today based on your income pattern and available balance. Built for freelancers, creators, gig workers, and anyone with unpredictable income.',
 
 
     ctaPrimary: 'Join Waitlist',
