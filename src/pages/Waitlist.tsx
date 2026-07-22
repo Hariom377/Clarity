@@ -61,8 +61,43 @@ export default function Waitlist() {
       <section className="px-5 pt-32 pb-16 sm:px-8 sm:pt-40">
         <div className="mx-auto max-w-[1280px]">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
-            {/* left: copy + benefits */}
-            <div className="lg:col-span-5">
+            {/* right: form - appears first on mobile */}
+            <div className="order-first lg:order-last lg:col-span-6 lg:col-start-7">
+              <Reveal delay={0.1} y={24}>
+                <div className="rounded-xl border border-line2 bg-card p-6 sm:p-8">
+                  <AnimatePresence mode="wait">
+                    {status === 'success' ? (
+                      <motion.div key="success" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: [0.16,1,0.3,1] }} className="flex flex-col items-center text-center">
+                        <div className="flex h-14 w-14 items-center justify-center rounded-full border border-line2">
+                          <Check className="h-6 w-6 text-paper" />
+                        </div>
+                        <h2 className="mt-6 text-[24px] font-semibold tracking-[-0.02em]">{f.successTitle}</h2>
+                        <p className="mt-3 max-w-[300px] text-[15px] leading-relaxed text-muted">{f.successBody}</p>
+                        <button onClick={() => { setStatus('idle'); setName(''); setEmail(''); setProfession(''); }} className="mt-6 font-mono text-[12px] text-muted hover:text-paper">{f.again}</button>
+                      </motion.div>
+                    ) : (
+                      <motion.form key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }} onSubmit={submit} className="space-y-5">
+                        {field(f.name, <input value={name} onChange={(e)=>setName(e.target.value)} placeholder={f.namePlaceholder} className={inputCls} />)}
+                        {field(f.email, <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder={f.emailPlaceholder} className={inputCls} />)}
+                        {field(t.waitlist.form.profession, (
+                          <select value={profession} onChange={(e)=>setProfession(e.target.value)} className={`${inputCls} appearance-none`}>
+                            <option value="" disabled>{f.professionPlaceholder}</option>
+                            {t.waitlist.professions.map((p) => <option key={p} value={p} className="bg-ink text-paper">{p}</option>)}
+                          </select>
+                        ))}
+                        {(error || status === 'dup') && <p className="font-mono text-[12px] text-paper">{error}</p>}
+                        <button type="submit" disabled={status==='loading'} className="w-full rounded-md bg-paper px-5 py-3.5 text-[15px] font-medium text-ink transition-colors hover:bg-[#e5e5e5] disabled:opacity-50">
+                          {status === 'loading' ? f.loading : f.submit}
+                        </button>
+                      </motion.form>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </Reveal>
+            </div>
+
+            {/* left: copy + benefits - appears second on mobile */}
+            <div className="order-last lg:order-first lg:col-span-5">
               <Reveal><SectionLabel>{t.waitlist.label}</SectionLabel></Reveal>
               <Reveal delay={0.05}>
                 <h1 className="mt-6 text-[clamp(2rem,4.8vw,3.8rem)] font-semibold leading-[1] tracking-[-0.035em] text-balance">{t.waitlist.title}</h1>
@@ -90,41 +125,6 @@ export default function Waitlist() {
                       </li>
                     ))}
                   </ul>
-                </div>
-              </Reveal>
-            </div>
-
-            {/* right: form */}
-            <div className="lg:col-span-6 lg:col-start-7">
-              <Reveal delay={0.1} y={24}>
-                <div className="rounded-xl border border-line2 bg-card p-6 sm:p-8">
-                  <AnimatePresence mode="wait">
-                    {status === 'success' ? (
-                      <motion.div key="success" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: [0.16,1,0.3,1] }} className="flex flex-col items-center py-10 text-center">
-                        <div className="flex h-14 w-14 items-center justify-center rounded-full border border-line2">
-                          <Check className="h-6 w-6 text-paper" />
-                        </div>
-                        <h2 className="mt-6 text-[24px] font-semibold tracking-[-0.02em]">{f.successTitle}</h2>
-                        <p className="mt-3 max-w-[300px] text-[15px] leading-relaxed text-muted">{f.successBody}</p>
-                        <button onClick={() => { setStatus('idle'); setName(''); setEmail(''); setProfession(''); }} className="mt-6 font-mono text-[12px] text-muted hover:text-paper">{f.again}</button>
-                      </motion.div>
-                    ) : (
-                      <motion.form key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }} onSubmit={submit} className="space-y-5">
-                        {field(f.name, <input value={name} onChange={(e)=>setName(e.target.value)} placeholder={f.namePlaceholder} className={inputCls} />)}
-                        {field(f.email, <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder={f.emailPlaceholder} className={inputCls} />)}
-                        {field(t.waitlist.form.profession, (
-                          <select value={profession} onChange={(e)=>setProfession(e.target.value)} className={`${inputCls} appearance-none`}>
-                            <option value="" disabled>{f.professionPlaceholder}</option>
-                            {t.waitlist.professions.map((p) => <option key={p} value={p} className="bg-ink text-paper">{p}</option>)}
-                          </select>
-                        ))}
-                        {(error || status === 'dup') && <p className="font-mono text-[12px] text-paper">{error}</p>}
-                        <button type="submit" disabled={status==='loading'} className="w-full rounded-md bg-paper px-5 py-3.5 text-[15px] font-medium text-ink transition-colors hover:bg-[#e5e5e5] disabled:opacity-50">
-                          {status === 'loading' ? f.loading : f.submit}
-                        </button>
-                      </motion.form>
-                    )}
-                  </AnimatePresence>
                 </div>
               </Reveal>
             </div>
