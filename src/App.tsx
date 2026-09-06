@@ -1,4 +1,7 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+//import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+
+
+import { BrowserRouter, StaticRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { LanguageProvider } from './lib/i18n';
 import Nav from './components/Nav';
@@ -19,32 +22,87 @@ function ScrollToTop() {
   return null;
 }
 
-export default function App() {
+// export default function App() {
+//   return (
+//     <LanguageProvider>
+//       <BrowserRouter>
+//         <div className="relative min-h-screen bg-ink text-paper">
+//           <div className="pointer-events-none fixed inset-0 -z-10 bg-grid mask-fade-b" />
+//           <ScrollToTop />
+//           <Nav />
+//           <main>
+//             <Routes>
+//               <Route path="/" element={<Home />} />
+//               <Route path="/features" element={<Features />} />
+//               <Route path="/how-it-works" element={<HowItWorks />} />
+//               <Route path="/about" element={<About />} />
+//               <Route path="/waitlist" element={<Waitlist />} />
+//               <Route path="/faq" element={<FAQ />} />
+//               <Route path="/contact" element={<Contact />} />
+//               {/* Future-ready routes — render ComingSoon today */}
+//               {brand.futureRoutes.map((r) => (
+//                 <Route key={r.path} path={r.path} element={<ComingSoon />} />
+//               ))}
+//               <Route path="*" element={<Home />} />
+//             </Routes>
+//           </main>
+//           <Footer />
+//         </div>
+//       </BrowserRouter>
+//     </LanguageProvider>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+function AppRoutes({ isServer = false }: { isServer?: boolean }) {
+  return (
+    <div className="relative min-h-screen bg-ink text-paper">
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-grid mask-fade-b" />
+      {!isServer && <ScrollToTop />}
+      <Nav />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/waitlist" element={<Waitlist />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/contact" element={<Contact />} />
+          {brand.futureRoutes.map((r) => (
+            <Route key={r.path} path={r.path} element={<ComingSoon />} />
+          ))}
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+export default function App({ serverUrl }: { serverUrl?: string }) {
+  if (serverUrl) {
+    return (
+      <LanguageProvider>
+        <StaticRouter location={serverUrl}>
+          <AppRoutes isServer />
+        </StaticRouter>
+      </LanguageProvider>
+    );
+  }
   return (
     <LanguageProvider>
       <BrowserRouter>
-        <div className="relative min-h-screen bg-ink text-paper">
-          <div className="pointer-events-none fixed inset-0 -z-10 bg-grid mask-fade-b" />
-          <ScrollToTop />
-          <Nav />
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/features" element={<Features />} />
-              <Route path="/how-it-works" element={<HowItWorks />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/waitlist" element={<Waitlist />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/contact" element={<Contact />} />
-              {/* Future-ready routes — render ComingSoon today */}
-              {brand.futureRoutes.map((r) => (
-                <Route key={r.path} path={r.path} element={<ComingSoon />} />
-              ))}
-              <Route path="*" element={<Home />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
+        <AppRoutes />
       </BrowserRouter>
     </LanguageProvider>
   );
