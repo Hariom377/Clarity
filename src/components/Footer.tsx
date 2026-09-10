@@ -35,24 +35,40 @@ export default function Footer() {
           </div>
 
           <div>
+<<<<<<< HEAD
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">Legal</p>
             <ul className="mt-4 space-y-2.5">
               <li><Link to="/privacy-policy" className="text-[13px] text-muted hover:text-paper">Privacy Policy</Link></li>
               <li><Link to="/terms" className="text-[13px] text-muted hover:text-paper">Terms of Service</Link></li>
               <li><Link to="/delete-account" className="text-[13px] text-muted hover:text-paper">Delete Account</Link></li>
               <li><Link to="/faq" className="text-[13px] text-muted hover:text-paper">{t.nav.faq}</Link></li>
+=======
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-faint">{t.footer.resources}</p>
+            <ul className="mt-4 space-y-2.5">
+              {brand.futureRoutes.slice(0, 5).map((r) => (
+                <li key={r.path}>
+                  <Link to={r.path} className="text-[13px] text-muted hover:text-paper">
+                    {r.label} <span className="font-mono text-[9px] text-faint">· {t.footer.comingSoon}</span>
+                  </Link>
+                </li>
+              ))}
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
             </ul>
           </div>
         </div>
 
         <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-line pt-6 sm:flex-row sm:items-center">
           <p className="font-mono text-[11px] text-faint">© {new Date().getFullYear()} {brand.name.toUpperCase()} {brand.suffix} — {t.footer.rights}</p>
+<<<<<<< HEAD
           <div className="flex items-center gap-4 flex-wrap">
             <Link to="/privacy-policy" className="font-mono text-[11px] text-faint hover:text-muted">Privacy</Link>
             <Link to="/terms" className="font-mono text-[11px] text-faint hover:text-muted">Terms</Link>
             <Link to="/delete-account" className="font-mono text-[11px] text-faint hover:text-muted">Delete Account</Link>
             <p className="font-mono text-[11px] text-faint">{t.footer.builtFor}</p>
           </div>
+=======
+          <p className="font-mono text-[11px] text-faint">{t.footer.builtFor}</p>
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
         </div>
       </div>
     </footer>

@@ -1,18 +1,24 @@
 import { Reveal } from '../components/Reveal';
 import { SectionLabel } from '../components/SectionLabel';
 import { useI18n } from '../lib/i18n';
+<<<<<<< HEAD
 import SEO from '../components/SEO';
+=======
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
 
 export default function HowItWorks() {
   const { t } = useI18n();
 
   return (
+<<<<<<< HEAD
     <>
       <SEO
         title="How It Works — iRREGO | Daily Safe Spending Limit Explained"
         description="Learn how iRREGO calculates your daily safe spending limit using your income history, fixed commitments, and savings goals — automatically."
         canonical="https://irrego.online/how-it-works"
       />
+=======
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
     <div>
       <section className="px-5 pt-32 pb-16 sm:px-8 sm:pt-40">
         <div className="mx-auto max-w-[1280px]">
@@ -65,6 +71,9 @@ export default function HowItWorks() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
     </>
+=======
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
   );
 }

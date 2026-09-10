@@ -41,15 +41,21 @@ export default function SEO({
     setMeta("og:type", "property", "website");
     setMeta("og:url", "property", canonical);
     setMeta("og:image", "property", image);
+<<<<<<< HEAD
     setMeta("og:image:width", "property", "1200");
     setMeta("og:image:height", "property", "630");
     setMeta("og:image:alt", "property", title);
+=======
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
 
     setMeta("twitter:card", "name", "summary_large_image");
     setMeta("twitter:title", "name", title);
     setMeta("twitter:description", "name", description);
     setMeta("twitter:image", "name", image);
+<<<<<<< HEAD
     setMeta("twitter:image:alt", "name", title);
+=======
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
 
     let canonicalTag = document.querySelector(
       'link[rel="canonical"]'

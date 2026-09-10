@@ -1,18 +1,24 @@
 import { Reveal } from '../components/Reveal';
 import { SectionLabel } from '../components/SectionLabel';
 import { useI18n } from '../lib/i18n';
+<<<<<<< HEAD
 import SEO from '../components/SEO';
+=======
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
 
 export default function About() {
   const { t } = useI18n();
 
   return (
+<<<<<<< HEAD
     <>
       <SEO
         title="About — iRREGO | Built for Freelancers and Gig Workers in India"
         description="Two founders from Varanasi building the personal finance app Indian freelancers, creators, and gig workers actually need."
         canonical="https://irrego.online/about"
       />
+=======
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
     <div>
       <section className="px-5 pt-32 pb-16 sm:px-8 sm:pt-40">
         <div className="mx-auto max-w-[1280px]">
@@ -91,6 +97,9 @@ export default function About() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
     </>
+=======
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
   );
 }

@@ -4,6 +4,7 @@ import { SectionLabel } from '../components/SectionLabel';
 import ProductMockup from '../components/ProductMockup';
 import { useI18n } from '../lib/i18n';
 import { brand } from '../lib/brand';
+<<<<<<< HEAD
 import SEO from '../components/SEO';
 
 /** Reusable clean phone frame — no blurry background, no outer frame overlay */
@@ -27,6 +28,8 @@ function PhoneFrame({ src, alt, className = '' }: { src: string; alt: string; cl
     </div>
   );
 }
+=======
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
 
 export default function Home() {
   const { t } = useI18n();
@@ -41,6 +44,7 @@ export default function Home() {
   const maxAmt = 65000;
 
   return (
+<<<<<<< HEAD
     <>
       <SEO
         title="iRREGO — Financial Operating System for Irregular Earners"
@@ -56,22 +60,46 @@ export default function Home() {
               <Reveal><SectionLabel>{t.hero.label}</SectionLabel></Reveal>
               <Reveal delay={0.05}>
                 <h1 className="mt-4 text-[clamp(2rem,5vw,3.8rem)] font-semibold leading-[1.0] tracking-[-0.035em] text-balance">
+=======
+    <div>
+      {/* ===== HERO ===== */}
+      <section className="relative px-5 pt-32 pb-20 sm:px-8 sm:pt-40 sm:pb-28">
+        <div className="mx-auto max-w-[1280px]">
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
+            <div className="lg:col-span-6">
+              <Reveal><SectionLabel>{t.hero.label}</SectionLabel></Reveal>
+              <Reveal delay={0.05}>
+                <h1 className="mt-6 text-[clamp(2.4rem,6.5vw,4.8rem)] font-semibold leading-[0.98] tracking-[-0.035em] text-balance">
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
                   {t.hero.title}
                 </h1>
               </Reveal>
               <Reveal delay={0.1}>
+<<<<<<< HEAD
                 <p className="mt-5 max-w-[440px] text-[15px] leading-relaxed text-muted">{t.hero.subtitle}</p>
               </Reveal>
               <Reveal delay={0.15}>
                 <div className="mt-7 flex flex-wrap items-center gap-3">
                   <Link to="/waitlist" className="rounded-md bg-paper px-5 py-2.5 text-[13px] font-medium text-ink transition-colors hover:bg-[#e5e5e5]">{t.hero.ctaPrimary}</Link>
                   <Link to="/how-it-works" className="rounded-md border border-line2 px-5 py-2.5 text-[13px] text-paper transition-colors hover:border-faint">{t.hero.ctaSecondary}</Link>
+=======
+                <p className="mt-7 max-w-[480px] text-[17px] leading-relaxed text-muted">{t.hero.subtitle}</p>
+              </Reveal>
+              <Reveal delay={0.15}>
+                <div className="mt-9 flex flex-wrap items-center gap-3">
+                  <Link to="/waitlist" className="rounded-md bg-paper px-5 py-3 text-[14px] font-medium text-ink transition-colors hover:bg-[#e5e5e5]">{t.hero.ctaPrimary}</Link>
+                  <Link to="/how-it-works" className="rounded-md border border-line2 px-5 py-3 text-[14px] text-paper transition-colors hover:border-faint">{t.hero.ctaSecondary}</Link>
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
                 </div>
               </Reveal>
             </div>
             <div className="lg:col-span-6">
               <Reveal delay={0.2} y={30}>
+<<<<<<< HEAD
                 <div className="lg:pl-4"><ProductMockup /></div>
+=======
+                <div className="lg:pl-6"><ProductMockup /></div>
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
               </Reveal>
             </div>
           </div>
@@ -130,6 +158,7 @@ export default function Home() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* ===== SOLUTION — Analytics screen shows full picture ===== */}
       <section className="border-t border-line px-5 py-24 sm:px-8 sm:py-32">
         <div className="mx-auto max-w-[1280px]">
@@ -168,10 +197,49 @@ export default function Home() {
                 />
               </Reveal>
             </div>
+=======
+<p className="mt-6 text-[16px] leading-relaxed text-muted">
+  Learn how our{" "}
+  <Link
+    to="/features"
+    className="text-paper underline underline-offset-4 hover:text-faint"
+  >
+    budgeting features
+  </Link>{" "}
+  are built specifically for people with irregular income.
+</p>
+
+
+
+      
+
+      {/* ===== SOLUTION ===== */}
+      <section className="border-t border-line px-5 py-24 sm:px-8 sm:py-32">
+        <div className="mx-auto max-w-[1280px]">
+          <Reveal><SectionLabel>{t.solution.label}</SectionLabel></Reveal>
+          <Reveal delay={0.05}>
+            <h2 className="mt-6 max-w-[680px] text-[clamp(1.8rem,4vw,3rem)] font-semibold leading-[1.03] tracking-[-0.03em] text-balance">{t.solution.title}</h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="mt-6 max-w-[560px] text-[16px] leading-relaxed text-muted">{t.solution.body1}</p>
+            <p className="mt-4 max-w-[560px] text-[16px] leading-relaxed text-muted">{t.solution.body2}</p>
+          </Reveal>
+          <div className="mt-12 grid grid-cols-1 gap-px border border-line2 bg-line2 sm:grid-cols-2 lg:grid-cols-4">
+            {t.solution.points.map((p, i) => (
+              <Reveal key={i} delay={i * 0.05}>
+                <div className="h-full bg-card p-6">
+                  <span className="font-mono text-[11px] text-faint">0{i + 1}</span>
+                  <h3 className="mt-3 text-[16px] font-medium tracking-[-0.01em] text-paper">{p.t}</h3>
+                  <p className="mt-2 text-[13px] leading-relaxed text-muted">{p.d}</p>
+                </div>
+              </Reveal>
+            ))}
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* ===== TRACK EVERY RUPEE — Transactions screen ===== */}
       <section className="border-t border-line px-5 py-24 sm:px-8 sm:py-32">
         <div className="mx-auto max-w-[1280px]">
@@ -304,6 +372,21 @@ export default function Home() {
           </div>
         </div>
       </section>
+=======
+<p className="mt-6 text-[16px] leading-relaxed text-muted">
+  Discover exactly{" "}
+  <Link
+    to="/how-it-works"
+    className="text-paper underline underline-offset-4 hover:text-faint"
+  >
+    how iRREGO works
+  </Link>{" "}
+  to calculate your safe daily spending limit.
+</p>
+
+
+      
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
 
       {/* ===== TRUST ===== */}
       <section className="border-t border-line px-5 py-24 sm:px-8 sm:py-32">
@@ -328,6 +411,23 @@ export default function Home() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+<div className="mt-10">
+  <Link
+    to="/about"
+    className="text-paper underline underline-offset-4 hover:text-faint"
+  >
+    Learn more about why we built iRREGO →
+  </Link>
+</div>
+
+
+
+      
+
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
       {/* ===== CTA ===== */}
       <section className="border-t border-line px-5 py-24 sm:px-8 sm:py-32">
         <div className="mx-auto max-w-[1280px]">
@@ -337,6 +437,7 @@ export default function Home() {
               <h2 className="mt-6 max-w-[700px] text-[clamp(2rem,5vw,4rem)] font-semibold leading-[1] tracking-[-0.035em] text-balance">{t.cta.title}</h2>
               <p className="mt-5 max-w-[440px] text-[16px] leading-relaxed text-muted">{t.cta.body}</p>
               <Link to="/waitlist" className="mt-8 rounded-md bg-paper px-6 py-3.5 text-[15px] font-medium text-ink transition-colors hover:bg-[#e5e5e5]">{t.cta.button}</Link>
+<<<<<<< HEAD
               <div className="mt-6 flex flex-wrap justify-center gap-6 text-sm">
                 <Link to="/features" className="text-muted hover:text-paper">Features</Link>
                 <Link to="/how-it-works" className="text-muted hover:text-paper">How It Works</Link>
@@ -344,11 +445,64 @@ export default function Home() {
                 <Link to="/about" className="text-muted hover:text-paper">About</Link>
                 <Link to="/contact" className="text-muted hover:text-paper">Contact</Link>
               </div>
+=======
+
+
+
+
+
+              
+<div className="mt-6 flex flex-wrap justify-center gap-6 text-sm">
+
+  <Link
+    to="/features"
+    className="text-muted hover:text-paper"
+  >
+    Features
+  </Link>
+
+  <Link
+    to="/how-it-works"
+    className="text-muted hover:text-paper"
+  >
+    How It Works
+  </Link>
+
+  <Link
+    to="/faq"
+    className="text-muted hover:text-paper"
+  >
+    FAQ
+  </Link>
+
+  <Link
+    to="/about"
+    className="text-muted hover:text-paper"
+  >
+    About
+  </Link>
+
+  <Link
+    to="/contact"
+    className="text-muted hover:text-paper"
+  >
+    Contact
+  </Link>
+
+</div>
+
+
+
+              
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
             </div>
           </Reveal>
         </div>
       </section>
     </div>
+<<<<<<< HEAD
     </>
+=======
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
   );
 }

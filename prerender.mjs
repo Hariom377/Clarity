@@ -7,7 +7,11 @@
  * 1. Builds the client bundle (normal Vite build)
  * 2. Builds a Node.js server bundle (entry-server.tsx → renderToString)
  * 3. Renders each route to a static HTML file in dist/
+<<<<<<< HEAD
  * 4. Injects per-route meta tags (title, description, canonical, OG, JSON-LD)
+=======
+ * 4. Injects per-route meta tags (title, description, canonical, OG)
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
  *
  * Result: Google's crawler gets real HTML on the first request.
  * No JS rendering required for indexing.
@@ -15,7 +19,11 @@
 
 import { build } from 'vite';
 import { join, dirname } from 'path';
+<<<<<<< HEAD
 import { fileURLToPath, pathToFileURL } from 'url';
+=======
+import { fileURLToPath } from 'url';
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -70,6 +78,7 @@ const ROUTE_META = {
   },
 };
 
+<<<<<<< HEAD
 // ─── FAQPage JSON-LD (injected into /faq pre-rendered HTML) ──────────────────
 const FAQ_ITEMS = [
   { q: 'Who is it built for?', a: 'For Unstable Income Users, Freelancers, creators, designers, developers, consultants, agency owners, gig workers, delivery partners, self-employed professionals and students with side income — anyone whose income does not arrive on a fixed schedule.' },
@@ -97,6 +106,11 @@ const FAQ_SCHEMA = JSON.stringify({
 // ─── Inject per-route meta tags into the HTML template ───────────────────────
 function injectMeta(html, meta, route) {
   let result = html
+=======
+// ─── Inject per-route meta tags into the HTML template ───────────────────────
+function injectMeta(html, meta) {
+  return html
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
     .replace(/<title>[^<]*<\/title>/, `<title>${meta.title}</title>`)
     .replace(/(<meta name="title"\s+content=")[^"]*(")/,           `$1${meta.title}$2`)
     .replace(/(<meta name="description"\s+content=")[^"]*(")/,     `$1${meta.description}$2`)
@@ -106,6 +120,7 @@ function injectMeta(html, meta, route) {
     .replace(/(<meta name="twitter:title"\s+content=")[^"]*(")/,   `$1${meta.title}$2`)
     .replace(/(<meta name="twitter:description"\s+content=")[^"]*(")/,`$1${meta.description}$2`)
     .replace(/(<link\s+rel="canonical"\s+href=")[^"]*(")/,         `$1${meta.canonical}$2`);
+<<<<<<< HEAD
 
   // Inject FAQPage JSON-LD into /faq page
   if (route === '/faq') {
@@ -116,6 +131,8 @@ function injectMeta(html, meta, route) {
   }
 
   return result;
+=======
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
 }
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
@@ -142,12 +159,18 @@ async function prerender() {
   // 3. Pre-render each route to a static HTML file
   console.log('⚡ Step 3/3 — Pre-rendering routes...\n');
 
+<<<<<<< HEAD
   const serverEntryPath = pathToFileURL(join(__dirname, 'dist/server/entry-server.js')).href;
   const { render } = await import(serverEntryPath);
   const baseTemplate = readFileSync(join(__dirname, 'dist/index.html'), 'utf-8');
 
   const failures = [];
 
+=======
+  const { render } = await import(join(__dirname, 'dist/server/entry-server.js'));
+  const baseTemplate = readFileSync(join(__dirname, 'dist/index.html'), 'utf-8');
+
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
   for (const route of ROUTES) {
     const meta = ROUTE_META[route] ?? ROUTE_META['/'];
 
@@ -155,6 +178,7 @@ async function prerender() {
     try {
       appHtml = render(route);
     } catch (err) {
+<<<<<<< HEAD
       // LOUD failure — collect and report after all routes, but still write shell
       failures.push({ route, err: err.message });
       console.warn(`  ⚠ renderToString failed for ${route}: ${err.message}`);
@@ -163,6 +187,14 @@ async function prerender() {
 
     let html = baseTemplate.replace('<!--app-html-->', appHtml);
     html = injectMeta(html, meta, route);
+=======
+      console.warn(`  ⚠ renderToString failed for ${route}: ${err.message}`);
+      console.warn('    Falling back to empty shell (page will still work via client-side React)');
+    }
+
+    let html = baseTemplate.replace('<!--app-html-->', appHtml);
+    html = injectMeta(html, meta);
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
 
     const outDir = route === '/'
       ? join(__dirname, 'dist')
@@ -171,6 +203,7 @@ async function prerender() {
     if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
 
     writeFileSync(join(outDir, 'index.html'), html);
+<<<<<<< HEAD
     const status = failures.find(f => f.route === route) ? '⚠' : '✓';
     console.log(`  ${status} ${route.padEnd(20)} → dist${route}/index.html`);
   }
@@ -184,6 +217,12 @@ async function prerender() {
     console.error('   crawlers will see less content. Investigate the errors above.\n');
   }
 
+=======
+    console.log(`  ✓ ${route.padEnd(20)} → dist${route}/index.html`);
+  }
+
+  console.log('\n✅ Pre-rendering complete! All routes have static HTML.\n');
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
   console.log('📁 Output structure:');
   ROUTES.forEach(r => {
     const path = r === '/' ? 'dist/index.html' : `dist${r}/index.html`;

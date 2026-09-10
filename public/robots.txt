@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
+<<<<<<< HEAD
 # AI search engine crawlers — explicitly allowed for AI SEO
 User-agent: GPTBot
 Allow: /
@@ -27,4 +28,6 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
+=======
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
 Sitemap: https://irrego.online/sitemap.xml

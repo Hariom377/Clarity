@@ -14,9 +14,12 @@ import Waitlist from './pages/Waitlist';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
 import ComingSoon from './pages/ComingSoon';
+<<<<<<< HEAD
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import DeleteAccount from './pages/DeleteAccount';
 import Terms from './pages/Terms';
+=======
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
 import { brand } from './lib/brand';
 
 function ScrollToTop() {
@@ -81,9 +84,12 @@ function AppRoutes({ isServer = false }: { isServer?: boolean }) {
           <Route path="/waitlist" element={<Waitlist />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
+<<<<<<< HEAD
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/delete-account" element={<DeleteAccount />} />
           <Route path="/terms" element={<Terms />} />
+=======
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
           {brand.futureRoutes.map((r) => (
             <Route key={r.path} path={r.path} element={<ComingSoon />} />
           ))}

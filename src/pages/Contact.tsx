@@ -5,7 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Check } from 'lucide-react';
 import { useI18n } from '../lib/i18n';
 import { brand } from '../lib/brand';
+<<<<<<< HEAD
 import SEO from '../components/SEO';
+=======
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
 
 export default function Contact() {
   const { t } = useI18n();
@@ -50,12 +53,15 @@ export default function Contact() {
   const emails = [brand.email.general, brand.email.partnerships, brand.email.support];
 
   return (
+<<<<<<< HEAD
     <>
       <SEO
         title="Contact — iRREGO | Get in Touch"
         description="Contact the iRREGO team. We are two founders from Varanasi and we would love to hear from you."
         canonical="https://irrego.online/contact"
       />
+=======
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
     <div>
       <section className="px-5 pt-32 pb-16 sm:px-8 sm:pt-40">
         <div className="mx-auto max-w-[1280px]">
@@ -117,6 +123,9 @@ export default function Contact() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
     </>
+=======
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
   );
 }

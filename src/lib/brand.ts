@@ -49,7 +49,11 @@ export const brand = {
   },
 
   /** Open Graph / social share image path. */
+<<<<<<< HEAD
   ogImage: '/og-image.jpg',
+=======
+  ogImage: '/og-image.png',
+>>>>>>> 1e97b0db204183a11b56dde0978ffc7ba6d953b9
 
   /**
    * Future-ready routes. These are wired into the router and render
