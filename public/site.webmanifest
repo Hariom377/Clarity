@@ -1,0 +1,16 @@
+{
+  "name": "iRREGO",
+  "short_name": "iRREGO",
+  "description": "A Financial Operating System for freelancers, creators, and irregular earners. Know exactly how much you can safely spend today.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

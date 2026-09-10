@@ -1,0 +1,70 @@
+# iRREGO
+
+> iRREGO is a Financial Operating System for freelancers, creators, gig workers, and irregular earners in India.
+
+## What iRREGO Does
+
+iRREGO calculates your daily safe spending limit based on your income history, fixed expenses, emergency buffer, and savings goals. It is built specifically for people with irregular income — freelancers, gig workers, YouTubers, content creators, designers, developers, consultants, delivery partners, and self-employed professionals.
+
+Unlike traditional budgeting apps that assume a fixed monthly salary, iRREGO adapts to income that changes every month. It tells you exactly how much you can safely spend today without compromising your rent, your goals, or your financial future.
+
+## Core Value Proposition
+
+Know exactly how much you can safely spend today — even when your income varies every month.
+
+## Key Features
+
+- **Safe Spending Calculator**: One recalculated number every morning based on your income pattern and balance
+- **Income Tracking**: Tracks irregular payments, client transfers, UPI payments, and freelance invoices
+- **Expense Tracking**: Separates fixed costs (rent, EMI) from flexible spending and protects fixed costs first
+- **Goal Planning**: Automatically adjusts savings goals based on what you actually earned
+- **Emergency Fund Planning**: Shows your financial runway in months and builds a buffer into every calculation
+- **Financial Health Score**: A single 0–100 score combining buffer, runway, income stability, and goal progress
+- **Smart Insights**: Detects patterns — which months are slow, which clients pay late, where money goes
+
+## Target Audience
+
+- Freelancers and independent contractors
+- Content creators and YouTubers
+- Gig workers (Swiggy, Zomato, Urban Company, Fiverr)
+- Self-employed professionals
+- Consultants and agency owners
+- Students with part-time or side income
+- Anyone with unpredictable or irregular income
+
+## Key Pages
+
+- Homepage: https://irrego.online/
+- Features: https://irrego.online/features
+- How It Works: https://irrego.online/how-it-works
+- About: https://irrego.online/about
+- FAQ: https://irrego.online/faq
+- Join Waitlist: https://irrego.online/waitlist
+- Contact: https://irrego.online/contact
+
+## Company Information
+
+- Product: iRREGO (pronounced "irregular + go")
+- Founded by: Hariom Dubey and Amit (two founders from Varanasi, India)
+- Domain: https://irrego.online
+- Status: Pre-launch — waitlist open, early access opening soon
+- Platform: Cross-platform (Android, iOS, Web dashboard planned)
+- Pricing: Free core features + Premium plan (waitlist members get 3 months free)
+- Market: India — 15+ million freelancers, 7+ million gig workers
+
+## Frequently Asked Questions
+
+**Q: Who is iRREGO for?**
+A: Freelancers, creators, designers, developers, consultants, agency owners, gig workers, delivery partners, self-employed professionals, and students with side income — anyone whose income does not arrive on a fixed schedule.
+
+**Q: How is iRREGO different from expense trackers?**
+A: Expense trackers look backward — they tell you what you already spent. iRREGO looks forward — it tells you what you can safely spend today without breaking your runway.
+
+**Q: Is my data secure?**
+A: Yes. iRREGO is built on Supabase, an industry-standard secure cloud platform. Your data is encrypted. We never sell it, share it, or use it for advertising. You can delete your entire account permanently at any time.
+
+**Q: Will there be a mobile app?**
+A: Yes. A native mobile app for daily use and a web dashboard for a deeper view are being built cross-platform from day one.
+
+**Q: Will it remain free?**
+A: iRREGO launches as a free app with core features for everyone. A premium plan with advanced insights and financial health scoring will be available at a small monthly fee. Waitlist members get 3 months of premium free at launch.
